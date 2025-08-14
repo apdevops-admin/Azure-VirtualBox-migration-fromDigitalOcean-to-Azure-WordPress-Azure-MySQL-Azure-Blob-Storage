@@ -40,9 +40,10 @@ A resource group is a container for your Azure resources.
    - Username: `azureuser`
    - Inbound ports: Allow **SSH (22)** and optionally **HTTP (80)** if hosting a site
 
-![VM Basics](screenshots/vm_basics1.png)
-![VM Basics](screenshots/vm_basics2.png)
-![VM Basics](screenshots/vm_basics3.png)
+![VM Basics](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/vm_basics1.png)
+![VM Basics 2](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/vm_basics2.png)
+![VM Basics 3](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/vm_basics3.png)
+
 
 ---
 
@@ -50,7 +51,8 @@ A resource group is a container for your Azure resources.
 1. OS disk type: **Standard HDD** (30 GB )
 2. Keep the default encryption settings.
 
-![VM Disks](screenshots/vm_disks.png)
+![VM Disks](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/vm_disks.png)
+
 
 ---
 
@@ -59,7 +61,8 @@ A resource group is a container for your Azure resources.
 2. Public IP: **Enabled** (Dynamic).
 3. Network Security Group: Select **Basic** and ensure SSH is allowed.
 
-![VM Networking](screenshots/vm_networking.png)
+![VM Networking](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/vm_networking.png)
+
 
 ---
 
@@ -67,7 +70,7 @@ A resource group is a container for your Azure resources.
 1. Enable **Auto-shutdown** to save costs when the VM is not in use.
 2. Disable boot diagnostics unless you specifically need them.
 
-![VM Management](screenshots/vm_management.png)
+![VM Management](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/vm_management.png)
 
 ---
 
@@ -76,7 +79,7 @@ A resource group is a container for your Azure resources.
 2. Click **Create**.
 3. Wait for deployment to complete.
 
-![VM Review](screenshots/vm_review.png)
+![VM Review](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/vm_review.png)
 
 ---
 
