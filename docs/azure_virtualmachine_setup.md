@@ -1,8 +1,6 @@
-# Azure Virtual Machine Setup (GUI — Free Tier)
+# Azure Virtual Machine Setup 
 
 This guide walks through creating an Azure Virtual Machine using the Azure Portal.  
-No CLI required — we’ll use the graphical interface for everything.  
-This setup is optimized for the Azure Free Tier.
 
 ---
 
