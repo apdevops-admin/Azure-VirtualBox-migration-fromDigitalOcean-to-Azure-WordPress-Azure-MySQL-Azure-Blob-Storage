@@ -16,8 +16,8 @@ You will land on the Azure Portal dashboard.
 A resource group is a container for your Azure resources.
 
 1. In the top search bar, type **Resource groups** and click **Create**.
-2. Make sure your **Subscription** is set to the Free Tier subscription.
-3. Name it `rg-free-vm`.
+2. create your **Subscription**
+3. Name it `ur_subscriptionname`.
 4. Choose a **Region** close to your location.
 5. Click **Review + create**, then **Create**.
 
