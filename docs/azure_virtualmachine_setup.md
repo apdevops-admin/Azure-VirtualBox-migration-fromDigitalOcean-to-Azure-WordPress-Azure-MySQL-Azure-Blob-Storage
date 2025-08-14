@@ -34,18 +34,20 @@ A resource group is a container for your Azure resources.
    - Resource group: `rg-free-vm`
    - Virtual machine name: `free-linux-vm`
    - Region: same as resource group
-   - Image: **Ubuntu Server 22.04 LTS**
+   - Image: **Ubuntu Server 24.04 LTS**
    - Size: **B1s** (Free Tier eligible)
    - Authentication type: **SSH public key** or **Password**
    - Username: `azureuser`
    - Inbound ports: Allow **SSH (22)** and optionally **HTTP (80)** if hosting a site
 
-![VM Basics](screenshots/vm_basics.png)
+![VM Basics](screenshots/vm_basics1.png)
+![VM Basics](screenshots/vm_basics2.png)
+![VM Basics](screenshots/vm_basics3.png)
 
 ---
 
 ## 4. Configure the Disk
-1. OS disk type: **Standard SSD** (64 GB is Free Tier eligible)
+1. OS disk type: **Standard HDD** (30 GB )
 2. Keep the default encryption settings.
 
 ![VM Disks](screenshots/vm_disks.png)
@@ -85,3 +87,5 @@ A resource group is a container for your Azure resources.
 4. Paste it into your local terminal:
    ```bash
    ssh azureuser@<PUBLIC_IP>
+   ssh -i /home/user_name/keys/login.pem user@ip
+   
