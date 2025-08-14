@@ -21,7 +21,8 @@ A resource group is a container for your Azure resources.
 4. Choose a **Region** close to your location.
 5. Click **Review + create**, then **Create**.
 
-![Create Resource Group](screenshots/create_resource_group.png)
+![Create Resource Group](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/create_resource_group.png)
+
 
 
 ---
