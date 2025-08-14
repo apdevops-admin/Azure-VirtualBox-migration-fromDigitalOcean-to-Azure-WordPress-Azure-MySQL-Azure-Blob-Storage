@@ -23,6 +23,7 @@ A resource group is a container for your Azure resources.
 
 ![Create Resource Group](screenshots/create_resource_group.png)
 
+
 ---
 
 ## 3. Create the Virtual Machine
