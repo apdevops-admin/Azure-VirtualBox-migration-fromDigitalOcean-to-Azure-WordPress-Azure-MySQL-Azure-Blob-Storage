@@ -36,7 +36,7 @@ After deployment, open the server → **Overview** to note:
 - **Server name/host** (e.g., `wp-mysql-xyz.mysql.database.azure.com`)
 - **Admin user** (often `adminuser`)
 - **Port** `3306`
-<img width="774" height="492" alt="image" src="https://github.com/user-attachments/assets/58cb8d11-733e-41f1-a4bc-fd9da8fc56c3" />
+
 ---
 
 ## 2. Configure Networking & Firewall
@@ -50,20 +50,47 @@ If you chose **Private access**:
 1) Ensure the MySQL server is deployed with **VNet Integration** to the same VNet/subnet as the VM/App Service.  
 2) Confirm DNS resolution works inside the VNet (default Azure DNS is fine).
 
-![Azure MySQL Networking](https://raw.githubusercontent.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/main/screenshots/azure_mysql_network.png)
 
 ---
+
+<img width="862" height="298" alt="image" src="https://github.com/user-attachments/assets/6d76d52b-75c3-43b5-9303-930aa30635db" />
+<img width="867" height="370" alt="image" src="https://github.com/user-attachments/assets/dbc6070a-99f2-4003-8af5-e0222b21736e" />
 
 ## 3. Create the Database and Application User
 
 You can use **Query editor (preview)** in the Portal or connect from your VM.
 
-**Using the Portal (Query editor):**
-1) MySQL server → **Query editor (preview)** → sign in with the admin credentials.  
+**Connect from local system :**
+1) MySQL server →  sign in with the admin credentials.  
 2) Run:
-```sql
-CREATE DATABASE wp_production;
+   
+CREATE DATABASE DB_name;
 CREATE USER 'wp_user'@'%' IDENTIFIED BY 'REPLACE_WITH_STRONG_PASSWORD';
 GRANT ALL PRIVILEGES ON wp_production.* TO 'wp_user'@'%';
 FLUSH PRIVILEGES;
+
+<img width="786" height="355" alt="image" src="https://github.com/user-attachments/assets/a733a92e-1f7c-4e31-b2c8-12c90078f1fc" />
+
+4. Point WordPress to Azure MySQL
+
+   On your WordPress host (Azure VM or App Service), edit wp-config.php
+
+   /** Database settings */
+define( 'DB_NAME',     'wp_production' );
+define( 'DB_USER',     'wp_user' );
+define( 'DB_PASSWORD', 'REPLACE_WITH_STRONG_PASSWORD' );
+define( 'DB_HOST',     'wp-mysql-xyz.mysql.database.azure.com' ); // your server host
+define( 'DB_CHARSET',  'utf8mb4' );
+define( 'DB_COLLATE',  '' );
+
+/** Enforce SSL to Azure MySQL (recommended) */
+if (!defined('MYSQL_CLIENT_FLAGS')) {
+    define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
+}
+
+<img width="726" height="467" alt="image" src="https://github.com/user-attachments/assets/037dbc1e-7506-4b41-8974-2a35122af3e5" />
+
+
+
+
 
