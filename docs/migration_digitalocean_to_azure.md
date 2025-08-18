@@ -50,9 +50,9 @@ git add .
 git commit -m "Initial WordPress migration from DigitalOcean"
 git push -u origin main
 
-create azure virtual-machine
+Setup Azure Environment
+reffer https://github.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/blob/main/docs/azure_virtualmachine_setup.md
 
-reffer 
 
 
 
