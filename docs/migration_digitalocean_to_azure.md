@@ -2,40 +2,40 @@ Migrating WordPress from DigitalOcean to Azure
 
 1. Prerequisites
 
-A running WordPress site on DigitalOcean Droplet with MySQL database.
+* A running WordPress site on DigitalOcean Droplet with MySQL database.
 
-A GitHub account and repository.
+* A GitHub account and repository.
 
-An Azure account with:
+* An Azure account with:
 
 App Service
 
-Azure Database for MySQL
+* Azure Database for MySQL
 
-Azure Blob Storage
+* Azure Blob Storage
 
 2. Step 1: Backup WordPress Files and Database from DigitalOcean
 
 Backup Files
 
-# SSH into your DigitalOcean Droplet
-ssh root@your_droplet_ip
-
-# Navigate to WordPress root
-cd /var/www/html
-
-# Create a compressed backup
-tar -czvf wordpress_files.tar.gz .
+    # SSH into your DigitalOcean Droplet
+    ssh root@your_droplet_ip
+    
+    # Navigate to WordPress root
+    cd /var/www/html
+    
+    # Create a compressed backup
+    tar -czvf wordpress_files.tar.gz .
 
 
 Backup Database
 
-mysqldump -u db_user -p db_name > wordpress_db.sql
+    mysqldump -u db_user -p db_name > wordpress_db.sql
 
 Copy both backups to your local machine:
 
-scp root@your_droplet_ip:/var/www/html/wordpress_files.tar.gz .
-scp root@your_droplet_ip:~/wordpress_db.sql .
+    scp root@your_droplet_ip:/var/www/html/wordpress_files.tar.gz .
+    scp root@your_droplet_ip:~/wordpress_db.sql .
 
 Step 2: Push WordPress to GitHub
 
@@ -55,6 +55,7 @@ git push -u origin main
 
 Setup Azure Environment
 Reference Guide: 
+
 [Azure Virtual Machine Setup Guide →](https://github.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/blob/main/docs/azure_virtualmachine_setup.md)
 
 [Azure Blob Storage Integration Guide](https://github.com/apdevops-admin/Azure-VirtualBox-migration-fromDigitalOcean-to-Azure-WordPress-Azure-MySQL-Azure-Blob-Storage/blob/main/docs/azure_blob_storage_integration.md)
